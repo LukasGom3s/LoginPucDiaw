@@ -174,7 +174,3 @@ Gostaríamos de agradecer aos seguintes canais e pessoas que foram fundamentais 
 * **[Prof. Dr. João Paulo Aramuni](https://github.com/joaopauloaramuni)** - Pelos valiosos ensinamentos sobre Desenvolvimento, Arquitetura de Software e Padrões de Projeto.
 
 ---
-
-```
-
-```
