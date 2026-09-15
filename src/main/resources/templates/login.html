@@ -8,46 +8,49 @@
     <link rel="icon" type="image/png" th:href="@{/images/iconesite.jpg}">
 </head>
 <body>
-    <div class="login-wrapper">
-        
-        <!-- Lado Esquerdo: Formulário -->
-        <div class="form-panel">
-            <div class="form-box">
-                <h2 class="login-title">Bem-vindo</h2>
-                <p class="login-subtitle">Por favor, insira seus dados</p>
-                
-                <form th:action="@{/login}" method="post">
-                    <div class="input-group">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" name="username" required>
-                    </div>
-                    
-                    <div class="input-group">
-                        <label for="password">Senha</label>
-                        <input type="password" id="password" name="password" required>
-                    </div>
+<div class="login-wrapper">
 
-                    <div class="options-group">
-                        <a th:href="@{/recoverypassword}" class="forgot-password">Esqueceu sua senha?</a>
-                    </div>
-
-                    <div class="login-button-container">
-                        <button type="submit">Entrar</button>
-                    </div>
-
-                    <div class="login-redirect-options">
-                        <p>Ainda não tem cadastro? <a th:href="@{/register}">Cadastre-se</a></p>
-                    </div>
-                </form>
+    <!-- Lado Esquerdo: Formulário -->
+    <div class="form-panel">
+        <div class="form-box">
+            <div class="login-title-image">
+                <img th:src="@{/images/GeoSolar-logo.jpeg}" alt="GeoSolar" class="bg-image">
             </div>
-        </div>
+            <h2 class="login-title">Bem-vindo</h2>
+            <p class="login-subtitle">Por favor, insira seus dados</p>
 
-        <!-- Lado Direito: Imagem -->
-        <div class="image-panel">
-            <!-- Extensão corrigida para .avif -->
-            <img th:src="@{/images/imagem-lampada.avif}" alt="Energia Sustentável" class="bg-image">
-        </div>
+            <form th:action="@{/login}" method="post">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
 
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="options-group">
+                    <a th:href="@{/recoverypassword}" class="forgot-password">Esqueceu sua senha?</a>
+                </div>
+
+                <div class="login-button-container">
+                    <button type="submit">Entrar</button>
+                </div>
+
+                <div class="login-redirect-options">
+                    <p>Ainda não tem cadastro? <a th:href="@{/register}">Cadastre-se</a></p>
+                </div>
+            </form>
+        </div>
     </div>
+
+    <!-- Lado Direito: Imagem -->
+    <div class="image-panel">
+        <!-- Extensão corrigida para .avif -->
+        <img th:src="@{/images/imagem-lampada.avif}" alt="Energia Sustentável" class="bg-image">
+    </div>
+
+</div>
 </body>
 </html>

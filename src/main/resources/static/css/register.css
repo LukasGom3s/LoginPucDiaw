@@ -8,123 +8,138 @@ body, html {
     height: 100%;
     width: 100%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #ffffff;
 }
 
-/* Container ocupa 100% da tela */
 .login-wrapper {
     display: flex;
     width: 100vw;
     height: 100vh;
 }
 
-/* --- METADE ESQUERDA (FORMULÁRIO) --- */
 .form-panel {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
-    overflow-y: auto; /* Permite rolagem se a tela for pequena */
+    overflow-y: auto;
 }
 
 .form-box {
     width: 100%;
-    max-width: 480px; /* Alinhado com o tamanho do login */
-    padding: 2rem 2.5rem;
+    max-width: 460px;
+    padding: 2.5rem;
+    margin: auto 0;
 }
 
-/* Títulos centralizados */
+.login-title-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.login-title-image img {
+    width: 100%;
+    max-width: 190px;
+    height: auto;
+    object-fit: contain;
+}
+
 .login-title {
-    color: #76ad23; 
-    font-size: 2.8rem; 
-    font-weight: bold;
+    color: #064c3f;
+    font-size: 2.4rem;
+    font-weight: 800;
     margin-bottom: 0.5rem;
-    text-align: center; 
+    text-align: center;
 }
 
 .login-subtitle {
-    color: #888888;
-    font-size: 1.2rem; 
-    margin-bottom: 2rem; 
-    text-align: center; 
+    color: #666666;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
-/* Campos de Input */
 .input-group {
-    margin-bottom: 1.2rem; 
+    margin-bottom: 1.1rem;
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
 .input-group label {
-    font-size: 1.05rem; 
-    color: #76ad23; 
+    font-size: 1rem;
+    color: #064c3f;
     margin-bottom: 0.5rem;
-    font-weight: bold; 
+    font-weight: 600;
 }
 
 .input-group input {
     width: 100%;
-    padding: 0.9rem; 
-    border: 1px solid #dcdcdc;
-    border-radius: 8px; 
-    font-size: 1.05rem; 
+    padding: 0.9rem;
+    border: 1.5px solid #dcdcdc;
+    border-radius: 8px;
+    font-size: 1rem;
     outline: none;
-    transition: border-color 0.2s;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
 }
 
 .input-group input:focus {
-    border-color: #91d7d7; 
+    border-color: #6eb5b5;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(110, 181, 181, 0.15);
 }
 
-/* Botão de Cadastrar */
 .login-button-container {
-    margin-top: 1.5rem; 
+    margin-top: 1.5rem;
 }
 
 .login-button-container button {
     width: 100%;
-    padding: 1.1rem; 
-    background-color: #91d7d7; 
-    color: #111111; 
-    font-size: 1.5rem; 
-    font-weight: bold;
+    padding: 1.1rem;
+    background-color: #064c3f;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(6, 76, 63, 0.15);
 }
 
 .login-button-container button:hover {
-    background-color: #7ababa; 
-    color: #111111; 
+    background-color: #053b31;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(6, 76, 63, 0.25);
 }
 
-/* Links de Rodapé */
 .login-redirect-options {
     margin-top: 1.5rem;
     text-align: center;
-    font-size: 1.1rem; 
+    font-size: 1rem;
     color: #666666;
 }
 
 .login-redirect-options a {
-    color: #91d7d7; 
+    color: #064c3f;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
     margin-left: 5px;
+    transition: color 0.3s ease;
 }
 
 .login-redirect-options a:hover {
-    text-decoration: underline;
-    color: #76ad23; 
+    color: #6eb5b5;
 }
 
-/* --- METADE DIREITA (IMAGEM) --- */
 .image-panel {
-    flex: 1; 
-    background-color: #91d7d7; 
+    flex: 1;
+    background-color: #91d7d7;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,14 +149,13 @@ body, html {
 .image-panel .bg-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
-    object-position: center bottom; 
+    object-fit: cover;
+    object-position: center bottom;
 }
 
-/* --- RESPONSIVIDADE (Telas menores e celulares) --- */
 @media (max-width: 850px) {
     .login-wrapper {
-        flex-direction: column-reverse; 
+        flex-direction: column-reverse;
     }
     .image-panel {
         flex: 0.3;
@@ -149,6 +163,9 @@ body, html {
     }
     .form-panel {
         flex: 0.7;
-        padding-top: 1.5rem;
+        padding: 2rem 1rem;
+    }
+    .form-box {
+        padding: 1.5rem;
     }
 }
